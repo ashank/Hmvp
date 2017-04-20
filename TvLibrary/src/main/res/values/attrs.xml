@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--高斯模糊的属性声明-->
+    <declare-styleable name="PxBlurringView">
+        <attr name="blurRadius" format="integer"/>
+        <attr name="downsampleFactor" format="integer"/>
+        <attr name="overlayColor" format="color"/>
+    </declare-styleable>
+
+
+    <!--3D效果画廊属性-->
+    <declare-styleable name="FancyCoverFlow">
+        <attr name="unselectedAlpha" format="float"/>
+        <attr name="unselectedSaturation" format="float"/>
+        <attr name="unselectedScale" format="float"/>
+        <attr name="maxRotation" format="integer"/>
+        <attr name="scaleDownGravity" format="float"/>
+        <attr name="actionDistance" format="integer">
+            <enum name="auto" value="2147483647" />
+        </attr>
+    </declare-styleable>
+
+
+    <!-- PagerSlidingTabStrip -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+
+        <!-- 文字选中的颜色 -->
+        <attr name="pstsTextSelectedColor" format="color"></attr>
+        <attr name="pstsTextSelectedTextSize" format="dimension"></attr>
+        <attr name="pstsCountTextColor" format="color"></attr>
+        <attr name="pstsCountTextSize" format="dimension"></attr>
+        <attr name="pstsCountTextBackground" format="reference" />
+        <!-- 显示的样式选择 -->
+        <attr name="pstCountTextType">
+            <enum name="text" value="0"></enum>
+            <enum name="point" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <!--ViewPager的属性声明-->
+    <declare-styleable name="JazzyViewPager">
+        <attr name="changestyle">
+            <enum name="standard" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="zoomin" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="uncheckSrc" format="reference"></attr>
+        <attr name="checkSrc" format="reference"></attr>
+        <attr name="boardWidth" format="dimension"></attr>
+        <attr name="uncheckRevealColor" format="color"></attr>
+        <attr name="checkRevealColor" format="color"></attr>
+    </declare-styleable>
+
+
+    <!--CursorWheelLayout的属性说明-->
+    <declare-styleable name="CursorWheelLayout">
+        <attr name="wheelSelectedAngle" format="float"></attr>
+        <attr name="wheelPaddingRadio" format="float"></attr>
+        <attr name="wheelCenterRadio" format="float"></attr>
+        <attr name="wheelItemRadio" format="float"></attr>
+        <attr name="wheelFlingValue" format="integer"></attr>
+        <attr name="wheelCursorHeight" format="dimension"></attr>
+        <attr name="wheelCursorColor" format="color"></attr>
+        <attr name="wheelBackgroundColor" format="color"></attr>
+    </declare-styleable>
+
+    <!--水平listview的属性说明-->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+</resources>

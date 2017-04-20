@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_000000"
+    android:orientation="vertical"
+    >
+   <!-- <include
+        layout="@layout/giraffe_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <com.funhotel.ijkplayer.IjkVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.funhotel.ijkplayer.MediaControllerView
+        android:id="@+id/media_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.funhotel.ijkplayer.MediaControllerView>
+
+   <!-- <include
+        android:id="@+id/include"
+        layout="@layout/play_media_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+ <com.funhotel.tvllibrary.view.AdvancedWebView
+     android:id="@+id/web_view"
+     android:layout_width="match_parent"
+     android:layout_height="300px"
+     android:layerType="hardware"
+     android:scrollbars="none"
+     android:visibility="gone"
+     android:layout_centerVertical="true"
+     android:layout_alignParentBottom="true"
+     android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

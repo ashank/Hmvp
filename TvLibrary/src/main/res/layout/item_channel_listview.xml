@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_channel_listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relayout_channel"
+        android:layout_width="@dimen/px400"
+        android:layout_height="@dimen/px100">
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginLeft="@dimen/px60"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/px36"
+            android:textColor="@color/white"
+            android:id="@+id/item_channel_id"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px70" />
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginLeft="@dimen/px35"
+            android:layout_toRightOf="@id/item_channel_id"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/px36"
+            android:textColor="@color/white"
+            android:id="@+id/item_channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px70" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/img_reback"
+        android:id="@+id/tv_reback"
+        android:gravity="center"
+        android:textSize="@dimen/px32"
+        android:textColor="@color/white"
+        android:text="回看"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/px200"
+        android:layout_height="@dimen/px70" />
+
+</LinearLayout>

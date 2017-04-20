@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_ad"
+        android:layout_width="@dimen/px480"
+        android:layout_height="@dimen/px240"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/px50">
+        <ImageView
+            android:id="@+id/iv_ad"
+            android:layout_width="@dimen/px480"
+            android:layout_height="@dimen/px240"
+            android:src="@drawable/bg_ad_350_280"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px60"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/px30"
+            android:textColor="@color/color_ffffff"
+            android:background="#80000000"
+            android:gravity="center"
+            android:text="广告"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_volum"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px100"
+        android:layout_marginLeft="@dimen/px68"
+        android:layout_marginRight="@dimen/px68"
+        android:background="#90000000"
+        android:layout_below="@+id/rl_ad"
+        android:paddingLeft="@dimen/px50"
+        android:paddingRight="@dimen/px50">
+
+        <ImageView
+            android:id="@+id/iv_cut_volum"
+            android:layout_width="@dimen/px82"
+            android:layout_height="@dimen/px43"
+            android:src="@drawable/ic_cut_volum"
+            android:layout_centerVertical="true" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:secondaryProgress="0"
+            android:drawableLeft="@drawable/ic_cut_volum"
+            android:layout_toLeftOf="@+id/iv_add_volum"
+            android:layout_toRightOf="@+id/iv_cut_volum"
+            android:layout_centerVertical="true"
+            style="@style/Widget.SeekBar.Normal" />
+
+        <ImageView
+            android:id="@+id/iv_add_volum"
+            android:layout_width="@dimen/px82"
+            android:layout_height="@dimen/px43"
+            android:src="@drawable/ic_add_volum"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

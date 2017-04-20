@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.funhotel.playwebview.PlayWebViewActivity">
+
+
+    <com.funhotel.ijkplayer.IjkVideoView
+        android:id="@+id/video"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.funhotel.playwebview.AdvancedWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        >
+    </com.funhotel.playwebview.AdvancedWebView>
+
+     <ProgressBar
+         android:id="@+id/progress"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="12dp"
+         android:layout_marginLeft="12dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

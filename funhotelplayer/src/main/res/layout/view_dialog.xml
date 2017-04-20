@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/view_exit"
+        android:layout_width="@dimen/px1000"
+        android:layout_height="@dimen/px700"
+        android:background="@drawable/bg_media_controller"
+        android:orientation="vertical"
+        android:padding="@dimen/px52"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_exit_toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="温馨提示"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px48" />
+        <TextView
+            android:padding="@dimen/px20"
+            android:layout_marginLeft="@dimen/px30"
+            android:layout_marginTop="@dimen/px60"
+            android:textSize="@dimen/px40"
+            android:text="尊敬的用户您好！\n        您当前使用的是联通电视酒店专用版服务,暂时不开放增值产品服务,给您造成不便之处敬请谅解,感谢您的支持!"
+            android:lineSpacingExtra="@dimen/px10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginLeft="@dimen/px180"
+            android:layout_marginTop="@dimen/px100"
+            android:padding="@dimen/px20"
+            android:id="@+id/bt_sure"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px80"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_button"
+            android:nextFocusUp="@+id/bt_exit_see"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30" />
+
+    </LinearLayout>
+</RelativeLayout>

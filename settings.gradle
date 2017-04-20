@@ -1,1 +1,1 @@
-include ':app', ':mvp', ':miracast', ':presentation', ':dlna'
+include ':app', ':mvp', ':miracast', ':presentation', ':dlna', ':playwebview', ':ijkplayer-java', ':androidTvWidget', ':funhotelplayer', ':TvLibrary', ':marqueetext'

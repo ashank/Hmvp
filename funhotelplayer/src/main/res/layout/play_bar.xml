@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/icon_return"
+        android:layout_width="@dimen/px49"
+        android:layout_height="@dimen/px37" />
+    <TextView
+        android:text="返回"
+        android:layout_marginLeft="@dimen/px20"
+        android:textSize="@dimen/px30"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginLeft="@dimen/px72"
+        android:src="@drawable/icon_menu"
+        android:layout_width="@dimen/px43"
+        android:layout_height="@dimen/px47" />
+    <TextView
+        android:text="菜单"
+        android:layout_marginLeft="@dimen/px20"
+        android:textSize="@dimen/px30"       android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginLeft="@dimen/px99"
+        android:src="@drawable/icon_fast"
+        android:layout_width="@dimen/px35"
+        android:layout_height="@dimen/px37" />
+    <TextView
+        android:text="快退"
+        android:layout_marginLeft="@dimen/px20"
+        android:textSize="@dimen/px30"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginLeft="@dimen/px95"
+        android:src="@drawable/icon_rewind"
+        android:layout_width="@dimen/px35"
+        android:layout_height="@dimen/px37" />
+    <TextView
+        android:text="快进"
+        android:layout_marginLeft="@dimen/px20"
+        android:textSize="@dimen/px30"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginLeft="@dimen/px73"
+        android:src="@drawable/icon_play"
+        android:layout_width="@dimen/px37"
+        android:layout_height="@dimen/px37" />
+    <TextView
+        android:layout_marginLeft="@dimen/px20"
+        android:text="暂停 / 播放"
+        android:textSize="@dimen/px30"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

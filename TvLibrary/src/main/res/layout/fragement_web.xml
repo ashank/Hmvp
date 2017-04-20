@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:hardwareAccelerated="true">
+
+    <!-- The PullToRefreshWebView replaces a standard WebView widget. -->
+
+    <com.funhotel.travel.view.AdvancedWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="hardware"
+        android:scrollbars="none"/>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/load"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fafafa"
+    android:visibility="visible">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress"
+        android:layout_centerHorizontal="true"
+        android:text="正在加载数据..." />
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/error"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#fafafa"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/wlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/texterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wlogo"
+            android:layout_centerHorizontal="true"
+            android:text="糟糕,似乎网络断开了" />
+
+        <TextView
+            android:id="@+id/texterror01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texterror"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="尝试检查网络" />
+    </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>
+

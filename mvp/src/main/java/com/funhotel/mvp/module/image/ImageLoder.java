@@ -69,7 +69,7 @@ public class ImageLoder {
     private ExecutorService singleThreadExecutor = Executors.newCachedThreadPool();
     private WeakReference<Context> weakReference;
 
-    public static ImageLoder newInstance(Context context) {
+    public static ImageLoder newInstance( Context context) {
         if (null == mImageLoder) {
             mImageLoder = new ImageLoder(context);
         }

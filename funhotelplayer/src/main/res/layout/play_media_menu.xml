@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/px40"
+        android:layout_marginTop="@dimen/px40"
+        android:src="@drawable/huanlv_logo" />
+
+
+    <com.funhotel.tvllibrary.view.ChannelView
+        android:id="@+id/view_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_media_controll"
+        android:layout_marginBottom="@dimen/px10"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+
+
+    <!--时间移动-->
+    <ImageView
+        android:id="@+id/iv_timeshift"
+        android:layout_width="@dimen/px231"
+        android:layout_height="@dimen/px80"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/px40"
+        android:layout_marginTop="@dimen/px100"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_channel_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/px70"
+        android:layout_marginTop="@dimen/px70"
+        android:textSize="@dimen/px100"
+        android:textColor="@color/green"
+        android:visibility="visible"/>
+
+    <!-- loading-->
+    <ProgressBar
+        android:id="@+id/pb_video_loading"
+        android:layout_width="@dimen/px100"
+        android:layout_height="@dimen/px100"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/bg_progress"
+        android:indeterminateOnly="true"
+        android:layout_margin="@dimen/px150"
+        android:visibility="visible" />
+
+    <!--pause-->
+    <ImageView
+        android:id="@+id/img_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/px40"
+        android:layout_marginRight="@dimen/px120"
+        android:src="@drawable/ic_play"
+        android:visibility="gone" />
+
+
+    <!--错误显示-->
+    <TextView
+        android:id="@+id/tv_err_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_media_controller"
+        android:padding="@dimen/px30"
+        android:text="抱歉，网络超时"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30" />
+
+    <!--退出视图-->
+    <LinearLayout
+        android:id="@+id/view_exit"
+        android:layout_width="@dimen/px1300"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_media_controller"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/px52"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_exit_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="你是否退出当前收看节目？"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px48" />
+
+        <Button
+            android:id="@+id/bt_exit_exit"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px80"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px20"
+            android:background="@drawable/bg_button"
+            android:nextFocusUp="@+id/bt_exit_see"
+            android:text="退出"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px36" />
+
+        <Button
+            android:id="@+id/bt_exit_see"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px80"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px20"
+            android:background="@drawable/bg_button"
+            android:nextFocusDown="@+id/bt_exit_exit"
+            android:text="继续观看"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px36" />
+
+        <ImageView
+            android:id="@+id/img_ad_exit"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px280"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/px40"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ad_350_280"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <!--完成视图-->
+    <LinearLayout
+        android:id="@+id/view_compelete"
+        android:layout_width="@dimen/px1400"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_media_controller"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/px52"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_compelete_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="播放结束"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px48" />
+
+        <TextView
+            android:id="@+id/bt_compelete_see"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px80"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px20"
+            android:gravity="center"
+            android:text="5秒后自动退出"
+            android:textColor="@color/color_FE6F01"
+            android:textSize="@dimen/px30" />
+
+        <Button
+            android:id="@+id/bt_compelete_exit"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px80"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/px108"
+            android:background="@drawable/bg_button"
+            android:nextFocusUp="@+id/bt_compelete_see"
+            android:text="退出"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30" />
+
+        <ImageView
+            android:id="@+id/img_ad_compelete"
+            android:layout_width="@dimen/px600"
+            android:layout_height="@dimen/px280"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/px40"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ad_350_280"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <!--无网络视图-->
+    <LinearLayout
+        android:id="@+id/view_nonet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_no_net"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/px40"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/px131"
+            android:layout_height="@dimen/px114"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_nonet"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="@dimen/px870"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px72"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/px70">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="错误代码:0009"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/px20"
+                android:text="错误信息：非常抱歉，机顶盒网络连接失败！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/px50"
+                android:text="请按以下步骤检查："
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="1、请检查网线是否正常连接；"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="2、请尝试断电重启机顶盒；"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="3、若按以上操作，问题仍未解决，请拨打10010客服服务热线进行咨询。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <Button
+                android:layout_width="@dimen/px800"
+                android:layout_height="@dimen/px80"
+                android:layout_marginTop="@dimen/px45"
+                android:background="@drawable/bg_try_button"
+                android:text="重试"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px36"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--播放错误视图-->
+    <LinearLayout
+        android:id="@+id/view_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_no_net"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/px40"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/px131"
+            android:layout_height="@dimen/px114"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_nonet"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="@dimen/px870"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px72"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/px70">
+
+            <TextView
+                android:id="@+id/tv_error_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="错误代码:0005"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px48" />
+
+            <TextView
+                android:id="@+id/tv_error_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/px20"
+                android:text="错误信息：非常抱歉，机顶盒网络连接失败！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/px50"
+                android:text="请按以下步骤检查："
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="1、请重试；"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="2、请尝试断电重启机顶盒；"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px28"
+                android:text="3、若按以上操作，问题仍未解决，请拨打10010客服服务热线进行咨询。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px40" />
+
+            <Button
+                android:id="@+id/bt_try_again"
+                android:layout_width="@dimen/px800"
+                android:layout_height="@dimen/px80"
+                android:layout_marginTop="@dimen/px45"
+                android:background="@drawable/bg_try_button"
+                android:text="重试"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px36" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--controllView-->
+
+    <RelativeLayout
+        android:id="@+id/ll_media_controll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/px20"
+            android:layout_marginLeft="@dimen/px40"
+            android:layout_marginRight="@dimen/px40"
+            android:background="@drawable/bg_media_controller2"
+            android:orientation="vertical"
+            android:padding="@dimen/px22"
+            android:visibility="visible">
+
+            <!--卫视频道-->
+            <RelativeLayout
+                android:id="@+id/app_video_bottom_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_program_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/px400"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textSize="@dimen/px40" />
+
+                <SeekBar
+                    android:id="@+id/sb_video_progress"
+                    style="@style/Widget.SeekBar.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px10"
+                    android:layout_marginRight="@dimen/px10"
+                    android:layout_toLeftOf="@+id/ll_time"
+                    android:layout_toRightOf="@+id/tv_program_name"
+                    android:max="1000"
+                    android:progress="0"
+                    android:secondaryProgress="0" />
+
+                <LinearLayout
+                    android:id="@+id/ll_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_video_currentTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="00:00"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/px30" />
+
+                    <TextView
+                        android:id="@+id/tv_video_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px3"
+                        android:text="/"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/px30" />
+
+                    <TextView
+                        android:id="@+id/tv_video_endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px3"
+                        android:text="00:00"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/px30" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--正在播放-->
+            <LinearLayout
+                android:id="@+id/ll_current_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px35">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在播放: "
+                    android:textColor="#87FF00"
+                    android:textSize="@dimen/px30" />
+
+                <TextView
+                    android:id="@+id/tv_current_time_duration"
+                    android:layout_width="@dimen/px300"
+                    android:layout_height="wrap_content"
+                    android:textColor="#87FF00"
+                    android:textSize="@dimen/px30" />
+
+                <TextView
+                    android:id="@+id/tv_current_time_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#87FF00"
+                    android:textSize="@dimen/px30" />
+            </LinearLayout>
+            <!--即将播放-->
+            <LinearLayout
+                android:id="@+id/ll_next_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px22"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="即将播放: "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30" />
+
+                <TextView
+                    android:id="@+id/tv_next_time_duration"
+                    android:layout_width="@dimen/px300"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30" />
+
+                <TextView
+                    android:id="@+id/tv_next_time_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px30" />
+            </LinearLayout>
+
+            <!--播放功能条-->
+            <include
+                layout="@layout/play_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px34" />
+
+        </LinearLayout>
+        <!--ad-->
+        <ImageView
+            android:id="@+id/img_adforinfo"
+            android:layout_width="@dimen/px380"
+            android:layout_height="@dimen/px250"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/px20"
+            android:layout_marginRight="@dimen/px120"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_ad_600_280" />
+
+    </RelativeLayout>
+
+    <com.funhotel.ijkplayer.VolumeBarView
+        android:id="@+id/volume_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/px78"
+        android:visibility="gone">
+    </com.funhotel.ijkplayer.VolumeBarView>
+
+</RelativeLayout>
