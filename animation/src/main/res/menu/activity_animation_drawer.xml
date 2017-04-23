@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/tween" android:icon="@drawable/ic_menu_camera"
+            android:title="补间动画" />
+        <item android:id="@+id/property" android:icon="@drawable/ic_menu_gallery"
+            android:title="属性动画" />
+        <item android:id="@+id/layoutanimation" android:icon="@drawable/ic_menu_slideshow"
+            android:title="layoutAnimation" />
+        <item android:id="@+id/porlater" android:icon="@drawable/ic_menu_manage"
+            android:title="插值器" />
+
+        <item android:id="@+id/activity" android:icon="@drawable/ic_menu_share"
+            android:title="Activity动画" />
+
+        <item android:id="@+id/vetor" android:icon="@drawable/ic_menu_send"
+            android:title="VectorDrawble动画" />
+    </group>
+
+
+</menu>
