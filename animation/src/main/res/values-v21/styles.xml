@@ -13,6 +13,11 @@
         <item name="android:windowExitTransition">@transition/slide</item>
         <item name="android:windowEnterAnimation">@transition/explode</item>
         <item name="android:windowReenterTransition">@transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/transition3</item>
+        <item name="android:windowSharedElementExitTransition">@transition/transition3</item>
+        <item name="android:windowSharedElementReenterTransition">@transition/transition3</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/transition3</item>
+
     </style>
     
     <style name="AppTheme.NoActionBar">

@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-      android:id="@+id/item_root"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_root"
       xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:padding="5dp"
+      android:background="?android:attr/selectableItemBackground"
       android:orientation="horizontal"
-      >
+    tools:ignore="UseCompoundDrawables">
 
     <ImageView
+        android:id="@+id/imgioioioi"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@android:color/holo_green_light"
+        android:transitionName="img"
         android:layout_gravity="center_vertical"
-        />
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_text"
+        android:text="我的进步"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

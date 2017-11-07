@@ -29,6 +29,9 @@ import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -151,6 +154,9 @@ public class MainActivity extends AppCompatActivity
         mWifiDevicesAdapter = new WifiDevicesAdapter(peers, MainActivity.this);
         mWifiDevicesAdapter.setOnItemClickListener(this);
         mReclerview.setAdapter(mWifiDevicesAdapter);
+
+
+
 
 
         mDisplayManager = (DisplayManager) getSystemService(DISPLAY_SERVICE);

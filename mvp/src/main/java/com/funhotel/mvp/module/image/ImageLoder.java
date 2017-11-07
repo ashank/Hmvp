@@ -78,6 +78,7 @@ public class ImageLoder {
 
     public ImageLoder(Context context) {
         weakReference=new WeakReference<Context>(context.getApplicationContext());
+        init();
     }
 
     private void init(){
